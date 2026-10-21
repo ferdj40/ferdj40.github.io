@@ -43,3 +43,5 @@ dialog img { width:100%; border-radius:8px; margin:.6rem 0; }
 dialog li { margin-bottom:.3rem; }
 .estado { color:var(--muted); margin:0 0 .6rem; }
 #cerrar { position:sticky; top:0; float:right; font-size:1.2rem; background:var(--card); border-radius:50%; width:2rem; height:2rem; }
+
+.downloads { list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:.6rem; }

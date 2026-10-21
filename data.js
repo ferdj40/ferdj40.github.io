@@ -1,10 +1,13 @@
 // To add content, copy a block and change the text. That is all.
 const PROYECTOS = [
-  { titulo: "Project 1", texto: "Short description of the project.", enlace: "" },
-  { titulo: "Project 2", texto: "Another description.", enlace: "" }
+  {
+    titulo: "FerNote",
+    texto: "A native Mac notes app inspired by Apple Notes, built with SwiftUI and AppKit. Folders, #tags, checklists, tables, smart folders, password-locked notes, audio recording and iCloud Drive sync.",
+    enlace: ""
+  }
 ];
 
 const ACTIVIDADES = [
-  { fecha: "2026-10-21", texto: "Published my personal site." },
-  { fecha: "2026-10-01", texto: "Started a new project." }
+  { fecha: "2026-10-21", texto: "Published this personal site." },
+  { fecha: "2026-10-14", texto: "Built FerNote, my own notes app for Mac." }
 ];

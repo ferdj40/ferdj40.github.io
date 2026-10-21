@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Downloads · Fer</title>
+  <meta name="description" content="Choose a system and get its ISO from the official source">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html">Fer</a>
+    <nav>
+      <a href="index.html#proyectos">Projects</a>
+      <a href="descargas.html">Downloads</a>
+      <a href="index.html#contacto">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="elegir">
+      <h1>Downloads</h1>
+      <p class="picker-step">1. Choose a system family</p>
+      <div id="familias" class="downloads"></div>
+
+      <div id="paso-sistema" hidden>
+        <p class="picker-step">2. Choose a system</p>
+        <div id="sistemas" class="downloads"></div>
+      </div>
+    </section>
+
+    <section id="detalle-descarga" hidden>
+      <p><a href="descargas.html">← Back to the list</a></p>
+      <h2 id="titulo-sistema"></h2>
+      <p id="texto-sistema"></p>
+      <p><a id="enlace-oficial" class="btn" target="_blank" rel="noopener">Go to the official download page</a></p>
+      <p class="picker-step">The ISO is downloaded from the manufacturer, not from this site.</p>
+    </section>
+  </main>
+
+  <footer>© <span id="anio"></span> Fer</footer>
+
+  <script src="descargas.js"></script>
+</body>
+</html>

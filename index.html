@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi sitio personal</title>
+  <meta name="description" content="Mis proyectos y actividades">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#inicio">Fer</a>
+    <button id="menu-btn" aria-label="Menú" aria-expanded="false">☰</button>
+    <nav id="menu">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#contacto">Contacto</a>
+      <button id="theme-btn" aria-label="Cambiar tema">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <h1>Hola, soy <span>Fer</span></h1>
+      <p>Aquí publico mis proyectos y lo que voy haciendo.</p>
+      <a class="btn" href="#proyectos">Ver proyectos</a>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy Fer. Me gusta crear apps y herramientas propias, montar mi homelab y probar cosas nuevas. Aquí voy publicando lo que hago.</p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div id="lista-proyectos" class="grid"></div>
+    </section>
+
+    <section id="actividades">
+      <h2>Actividades</h2>
+      <ul id="lista-actividades" class="timeline"></ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p><a href="https://github.com/ferdj40">GitHub: ferdj40</a></p>
+    </section>
+  </main>
+
+  <footer>© <span id="anio"></span> Fer</footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

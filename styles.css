@@ -32,3 +32,14 @@ footer { text-align:center; padding:2rem; color:var(--muted); }
   nav.open { display:flex; }
 }
 .card img { width:100%; height:auto; border-radius:8px; margin-bottom:.8rem; }
+button.card { text-align:left; font:inherit; color:var(--fg); border:1px solid transparent; cursor:pointer; transition:transform .15s, border-color .15s; }
+button.card:hover, button.card:focus-visible { transform:translateY(-3px); border-color:var(--accent); }
+.more { color:var(--accent); font-size:.9rem; }
+dialog { max-width:640px; width:calc(100% - 2rem); max-height:88vh; overflow:auto; border:0; border-radius:14px; padding:1.5rem; background:var(--bg); color:var(--fg); }
+dialog::backdrop { background:rgba(0,0,0,.6); }
+dialog h2 { margin:0 0 .2rem; }
+dialog h3 { margin:1.2rem 0 .3rem; font-size:1rem; }
+dialog img { width:100%; border-radius:8px; margin:.6rem 0; }
+dialog li { margin-bottom:.3rem; }
+.estado { color:var(--muted); margin:0 0 .6rem; }
+#cerrar { position:sticky; top:0; float:right; font-size:1.2rem; background:var(--card); border-radius:50%; width:2rem; height:2rem; }

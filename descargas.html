@@ -5,10 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Downloads · Fer</title>
   <meta name="description" content="Choose a system and get its ISO from the official source">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root { --bg:#0b0d10; --fg:#e8ecf0; --muted:#7d8793; --line:#1e242c; --hover:#151b22; --accent:#6ea0ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif; min-height:100vh; display:flex; flex-direction:column; }
+    a { color:var(--accent); text-decoration:none; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border-bottom:1px solid var(--line); }
+    header .brand { color:var(--fg); font-weight:600; letter-spacing:.02em; }
+    header nav a { color:var(--muted); margin-left:1.2rem; font-size:.95rem; }
+    header nav a:hover { color:var(--fg); }
+    main { width:100%; max-width:640px; margin:0 auto; padding:3rem 1.25rem; flex:1; }
+    h1 { font-size:clamp(1.8rem,5vw,2.4rem); font-weight:600; margin:0 0 .4rem; letter-spacing:-.01em; }
+    .sub { color:var(--muted); margin:0 0 2.5rem; }
+    .step { color:var(--muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; margin:2rem 0 .8rem; }
+    .options { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.75rem; }
+    .options button { font:inherit; color:var(--fg); background:transparent; border:1px solid var(--line); border-radius:10px; padding:1.1rem 1.2rem; text-align:left; cursor:pointer; transition:background .15s,border-color .15s; }
+    .options button:hover, .options button:focus-visible { background:var(--hover); border-color:var(--accent); outline:none; }
+    .back { display:inline-block; color:var(--muted); font-size:.95rem; margin-bottom:2rem; }
+    .back:hover { color:var(--fg); }
+    .detail h2 { font-size:1.6rem; font-weight:600; margin:0 0 .4rem; }
+    .detail p { color:var(--muted); margin:0 0 1.5rem; }
+    .btn { display:inline-block; background:var(--accent); color:#0b0d10; font-weight:600; padding:.75rem 1.4rem; border-radius:10px; }
+    .note { font-size:.85rem; color:var(--muted); margin-top:1.2rem; }
+    .note a { color:var(--accent); }
+    .datos { display:grid; grid-template-columns:auto 1fr; gap:.5rem 1rem; margin:1.5rem 0 0; font-size:.9rem; }
+    .datos dt { color:var(--muted); }
+    .datos dd { margin:0; word-break:break-all; }
+    .datos code { font-size:.85rem; color:var(--fg); }
+    code { background:var(--hover); padding:.1rem .35rem; border-radius:4px; }
+    footer { text-align:center; color:var(--muted); font-size:.85rem; padding:2rem 1rem; border-top:1px solid var(--line); }
+    [hidden] { display:none !important; }
+  </style>
 </head>
 <body>
-  <header class="top">
+  <header>
     <a class="brand" href="index.html">Fer</a>
     <nav>
       <a href="index.html#proyectos">Projects</a>
@@ -20,21 +50,28 @@
   <main>
     <section id="elegir">
       <h1>Downloads</h1>
-      <p class="picker-step">1. Choose a system family</p>
-      <div id="familias" class="downloads"></div>
+      <p class="sub">Pick a system. The ISO comes from the manufacturer.</p>
+
+      <p class="step">Family</p>
+      <div id="familias" class="options"></div>
 
       <div id="paso-sistema" hidden>
-        <p class="picker-step">2. Choose a system</p>
-        <div id="sistemas" class="downloads"></div>
+        <p class="step">System</p>
+        <div id="sistemas" class="options"></div>
       </div>
     </section>
 
-    <section id="detalle-descarga" hidden>
-      <p><a href="descargas.html">← Back to the list</a></p>
+    <section id="detalle-descarga" class="detail" hidden>
+      <a class="back" href="descargas.html">← All systems</a>
       <h2 id="titulo-sistema"></h2>
       <p id="texto-sistema"></p>
-      <p><a id="enlace-oficial" class="btn" target="_blank" rel="noopener">Go to the official download page</a></p>
-      <p class="picker-step">The ISO is downloaded from the manufacturer, not from this site.</p>
+      <a id="enlace-oficial" class="btn" target="_blank" rel="noopener">Official download page</a>
+      <dl class="datos">
+        <dt>File</dt><dd id="archivo"></dd>
+        <dt>SHA256</dt><dd><code id="sha256"></code></dd>
+      </dl>
+      <p class="note"><a id="fuente-sha" target="_blank" rel="noopener">Official checksum file</a> · Compara el SHA256 de tu ISO con <code>shasum -a 256 archivo.iso</code> (Mac/Linux) o <code>certutil -hashfile archivo.iso SHA256</code> (Windows).</p>
+      <p class="note">The ISO is downloaded from the manufacturer. Nothing is hosted here.</p>
     </section>
   </main>
 

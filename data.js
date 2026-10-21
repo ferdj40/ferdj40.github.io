@@ -13,7 +13,8 @@ const PROYECTOS = [
   {
     titulo: "ZeroDay",
     texto: "A custom Matrix-style terminal emulator for Mac, with its own themes and a companion SSH client for iPhone.",
-    enlace: ""
+    enlace: "",
+    imagen: "img/zeroday.png"
   },
   {
     titulo: "FingLocal",
@@ -48,7 +49,8 @@ const PROYECTOS = [
   {
     titulo: "VidGrab",
     texto: "A Mac app plus Chrome extension, in the spirit of Video DownloadHelper, for saving videos from the web.",
-    enlace: ""
+    enlace: "",
+    imagen: "img/vidgrab.png"
   },
   {
     titulo: "PhotoNAS",

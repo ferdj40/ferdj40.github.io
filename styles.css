@@ -31,3 +31,4 @@ footer { text-align:center; padding:2rem; color:var(--muted); }
     background:var(--bg); padding:1rem; border-bottom:1px solid var(--card); }
   nav.open { display:flex; }
 }
+.card img { width:100%; height:auto; border-radius:8px; margin-bottom:.8rem; }

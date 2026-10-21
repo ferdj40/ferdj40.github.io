@@ -3,6 +3,7 @@ const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 
 $("#lista-proyectos").innerHTML = PROYECTOS.map((p) => `
   <article class="card">
+    ${p.imagen ? `<img src="${esc(p.imagen)}" alt="${esc(p.titulo)} screenshot" loading="lazy">` : ""}
     <h3>${esc(p.titulo)}</h3>
     <p>${esc(p.texto)}</p>
     ${p.enlace ? `<a href="${esc(p.enlace)}" target="_blank" rel="noopener">Learn more →</a>` : ""}

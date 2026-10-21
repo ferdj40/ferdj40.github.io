@@ -5,7 +5,7 @@ $("#lista-proyectos").innerHTML = PROYECTOS.map((p) => `
   <article class="card">
     <h3>${esc(p.titulo)}</h3>
     <p>${esc(p.texto)}</p>
-    ${p.enlace ? `<a href="${esc(p.enlace)}" target="_blank" rel="noopener">Ver más →</a>` : ""}
+    ${p.enlace ? `<a href="${esc(p.enlace)}" target="_blank" rel="noopener">Learn more →</a>` : ""}
   </article>`).join("");
 
 $("#lista-actividades").innerHTML = [...ACTIVIDADES]
